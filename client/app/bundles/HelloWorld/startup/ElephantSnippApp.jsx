@@ -2,7 +2,7 @@ import React from 'react';
 import ReactOnRails from 'react-on-rails';
 import { Provider } from 'react-redux';
 
-import configureStore from '../store/helloWorldStore';
+import configureStore from '../store/ElephantSnippStore';
 import ElephantSnippContainer from '../containers/ElephantSnippContainer';
 
 // See documentation for https://github.com/reactjs/react-redux.
