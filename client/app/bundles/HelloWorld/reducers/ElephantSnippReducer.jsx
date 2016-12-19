@@ -10,6 +10,6 @@ const name = (state = '', action) => {
   }
 };
 
-const helloWorldReducer = combineReducers({ name });
+const elephantSnippReducer = combineReducers({ name });
 
-export default helloWorldReducer;
+export default elephantSnippReducer;

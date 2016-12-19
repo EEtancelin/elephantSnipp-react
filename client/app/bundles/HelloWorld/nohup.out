@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/butterfly.server.py", line 300, in <module>
+    http_server.listen(port, address=host)
+  File "/usr/local/lib/python2.7/dist-packages/tornado_systemd/__init__.py", line 29, in listen
+    super(SystemdMixin, self).listen(port, address)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/tcpserver.py", line 126, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/netutil.py", line 196, in bind_sockets
+    sock.bind(sockaddr)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+[W 161219 16:10:51 butterfly.server:317] Butterfly is ready, open your browser to: https://127.0.0.1:57575/
