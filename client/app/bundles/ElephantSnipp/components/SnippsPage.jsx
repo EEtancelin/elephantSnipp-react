@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ControlBar from '../components/ControlBar'
 
 export default class SnippsPage extends React.Component {
   static propTypes = {
@@ -24,6 +25,7 @@ export default class SnippsPage extends React.Component {
   render() {
     return (
       <div>
+      <ControlBar />
         <h3>
           Hello, {this.state.name}!
         </h3>

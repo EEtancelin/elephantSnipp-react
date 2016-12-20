@@ -2,6 +2,7 @@
 
 import { connect } from 'react-redux';
 import SnippsPage from '../components/SnippsPage';
+import ControlBar from '../components/ControlBar'
 import * as actions from '../actions/ElephantSnippActionCreators';
 
 // Which part of the Redux global state does our component want to receive as props?
