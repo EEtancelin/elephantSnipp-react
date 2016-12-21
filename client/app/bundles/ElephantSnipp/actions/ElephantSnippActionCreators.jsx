@@ -9,5 +9,6 @@ export const updateName = (text) => ({
 
 export const changeControl = (text) => ({
   type: 'CHANGE_CONTROL',
-  text,
+  text
+  ,
 });
