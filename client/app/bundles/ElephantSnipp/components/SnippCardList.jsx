@@ -1,25 +1,25 @@
 
 class SnippCardList extends React.Component {
 
-  constructor(props){
-    super(props);
-    this.state = {value: '', snipps: this.props.snipps};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  constructor (props) {
+    super(props)
+    this.state = {value: '', snipps: this.props.snipps}
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange (event) {
+    this.setState({value: event.target.value})
   }
 
   handleSubmit (event) {
     alert('A name was submitted: ' + this.state.value)
     event.preventDefault()
 
-    var id = this.state.snipps.length + 1 ;
-    var title = this.state.value;
-    var snippList = this.state.snipps;
-    snippList.push(snippToJson(id, title));
+    var id = this.state.snipps.length + 1
+    var title = this.state.value
+    var snippList = this.state.snipps
+    snippList.push(snippToJson(id, title))
 
     var that = this
     $.ajax({

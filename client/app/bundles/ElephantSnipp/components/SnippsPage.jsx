@@ -1,5 +1,9 @@
 import React, { PropTypes } from 'react';
 import ControlBar from '../components/ControlBar'
+import VisibleSnipps from '../containers/VisibleSnipps'
+import Todo from '../components/Todo'
+import { updateName } from '../actions/ElephantSnippActionCreators'
+
 
 export default class SnippsPage extends React.Component {
   static propTypes = {
@@ -24,24 +28,18 @@ export default class SnippsPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className = 'container'>
+        <div className= 'row'>
+          <div className = 'col-sm-12'>
+
       <ControlBar />
+      <VisibleSnipps />
         <h3>
-          Hello, {this.state.name}!
+          Hello, {this.props.name}!
         </h3>
-        <hr />
-        <form >
-          <label htmlFor="name">
-            Say hello to:
-          </label>
-          <input
-            id="name"
-            type="text"
-            value={this.state.name}
-            onChange={(e) => this.updateName(e.target.value)}
-          />
-        </form>
       </div>
+    </div>
+  </div>
     );
   }
 }

@@ -1,19 +1,21 @@
 import { combineReducers } from 'redux'
 import { HELLO_WORLD_NAME_UPDATE } from '../constants/elephantSnippConstants'
+import { List, Map } from 'immutable';
 
-const name = (state = '', action) => {
+const initCB = Map({ input: 'input' })
+const init = Map({ controlBar: initCB, snipps: '12' })
+
+const name = (state = init, action) => {
   switch (action.type) {
     case HELLO_WORLD_NAME_UPDATE:
-      console.log(action)
-      return action.text
+      return init
     case 'CHANGE_CONTROL':
-      console.log(action)
-      return action.text
+      return init
+    case 'ADD_SNIPP':
+      return init
     default:
       return state
   }
 }
-
-const elephantSnippReducer = combineReducers({ name });
-
-export default elephantSnippReducer;
+const elephantSnippReducer = combineReducers({ name })
+export default elephantSnippReducer

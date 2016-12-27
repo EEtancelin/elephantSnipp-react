@@ -10,5 +10,9 @@ export const updateName = (text) => ({
 export const changeControl = (text) => ({
   type: 'CHANGE_CONTROL',
   text
-  ,
-});
+})
+
+export const addSnipp = (snipp) => ({
+  type: 'ADD_SNIPP',
+  snipp
+})
