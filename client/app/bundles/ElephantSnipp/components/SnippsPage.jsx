@@ -6,9 +6,6 @@ import { updateName } from '../actions/ElephantSnippActionCreators'
 
 
 export default class SnippsPage extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired, // this is passed from the Rails view
-  };
 
   /**
    * @param props - Comes from your rails view.
